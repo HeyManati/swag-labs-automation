@@ -12,10 +12,12 @@ End-to-end automation framework built with **Playwright + TypeScript** following
 ## 🧪 Test Coverage
 
 | Module | Test Cases | Type |
-|---|---|---|
+|----------------|---|-----|
 | Authentication | 3 | E2E |
-| Inventory | 4 | E2E |
-| **Total** | **7** | |
+| Inventory      | 4 | E2E |
+| Cart           | 4 | E2E |
+| Checkout       | 6 | E2E |
+| **Total**      | **17** | |
 
 ### Authentication
 - ✅ Successful login with valid credentials
@@ -35,15 +37,19 @@ End-to-end automation framework built with **Playwright + TypeScript** following
 ```
 swag-labs-automation/
 ├── pages/
-│   ├── LoginPage.ts        # Auth page interactions
-│   └── InventoryPage.ts    # Inventory page interactions
+│   ├── LoginPage.ts
+│   ├── InventoryPage.ts
+│   ├── CartPage.ts
+│   └── CheckoutPage.ts
 ├── tests/
-│   ├── login.spec.ts       # Authentication test suite
-│   └── inventory.spec.ts   # Inventory test suite
-├── .github/
-│   └── workflows/
-│       └── playwright.yml  # CI/CD pipeline
-└── playwright.config.ts
+│   ├── auth/
+│   │   └── login.spec.ts
+│   ├── inventory/
+│   │   └── inventory.spec.ts
+│   ├── cart/
+│   │   └── cart.spec.ts
+│   └── checkout/
+│       └── checkout.spec.ts
 ```
 
 ### Design Decisions
