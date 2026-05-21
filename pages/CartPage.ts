@@ -36,4 +36,8 @@ export class CartPage {
   async proceedToCheckout() {
     await this.checkoutButton.click();
   }
+
+  async checkout() {
+  await this.page.locator('[data-test="checkout"]').click();
+}
 }
